@@ -1,0 +1,115 @@
+body {
+  font-family: "Oswald", Arial, sans-serif;
+  color: #000000;
+}
+
+.main-header {
+  border-bottom: 1px solid #dadfe6;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100px; 
+}
+
+.main-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  min-height: 100px;
+  background-color: #ee3b33;
+  text-decoration: none;
+}
+
+.main-logo img {
+  margin-top: -3px;
+}
+
+.main-logo span {
+  margin-top: 5px;
+  text-transform: uppercase;
+  color:#fff;
+}
+
+.logo-uppercase-title {
+  font-size: 16px;
+}
+
+.logo-lowrcase-title {
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.site-navigation {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.site-navigation a {
+  display: block;
+  padding: 38px 35px;
+  color: #000000;
+  text-decoration: none;   
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: #ee3b33;
+}
+
+.site-navigation-current {
+  border-bottom: 3px solid #ee3b33;
+}
+
+.additional-navigation {
+  display: flex;
+  margin-left: auto;
+}
+
+.additional-navigation a {
+  display: block;
+  padding: 40px 16px;
+  font-size: 12px;
+  color: #000000;
+  text-decoration: none;  
+}
+
+.additional-navigation a:hover,
+.additional-navigation a:focus {
+  color: #ee3b33;
+}
+
+.search {
+  position: relative;
+  min-width: 20px;
+  padding-left: 16px;
+  margin-right: 60px;
+}
+
+.search label {
+  position: absolute;
+  top:35px;
+  right: 0;
+  width: 20px;
+  height:20px;
+  background-image: url(img/search.png);
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+}
+
+.search-input {
+  display: none;
+  margin-top: 32px ; 
+  padding-right: 20px;
+  width: 160px;
+}
+
+.search-input:hover,
+.search-input:focus {
+  display: block;
+}
