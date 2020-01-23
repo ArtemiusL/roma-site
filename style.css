@@ -1,5 +1,6 @@
 body {
   font-family: "Oswald", Arial, sans-serif;
+  font-weight: 500;
   color: #000000;
 }
 
@@ -112,4 +113,53 @@ nav {
 .search-input:hover,
 .search-input:focus {
   display: block;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.page-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  border-bottom: 1px solid #dadfe6;
+}
+
+.page-navigation-current {
+  position: relative;
+}
+
+.page-navigation-current::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -81px;
+  width: 162px;
+  height: 3px;
+  background-color: #ee3b33;
+}
+
+.page-navigation a {
+  display: block;
+  width: 162px;
+  padding:20px 62px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 13px;
+  color: #000000;
+}
+
+.page-navigation a:hover,
+.page-navigation a:focus {
+  color: #ee3b33;
+}
+
+.page-navigation img {
+  width: 162px;
+  height: 92px;
+  margin-bottom: 18px;
 }
