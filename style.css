@@ -104,15 +104,18 @@ nav {
 }
 
 .search-input {
-  display: none;
   margin-top: 32px ; 
   padding-right: 20px;
-  width: 160px;
+  width: 0;
+  transition: 0.3s width, 0.3s border-color;
+  border-color: transparent;
+  border-width: 0.5px;
 }
 
 .search-input:hover,
 .search-input:focus {
-  display: block;
+  width: 160px;
+  border-color: rgba(0, 0, 0, 0.3);
 }
 
 .container {
@@ -397,7 +400,7 @@ nav {
   left: 10%;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden {
   position:absolute;
   width: 1px;
   height: 1px;
@@ -430,7 +433,7 @@ nav {
   z-index: -1;
 }
 
-.specifications-list .item {
+.spec-item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -444,11 +447,12 @@ nav {
   background-color: transparent;
 }
 
-.specifications-list .item svg {
-  fill: #c8c8c8;
+.spec-item:hover,
+.spec-item:focus {
+  color: #000;
 }
 
-.specifications-list .item::after {
+.spec-item::after {
   content: '';
   padding: 0;
   margin-top: 10px;
@@ -458,38 +462,39 @@ nav {
   background-color: #c8c8c8;
 }
 
-.specifications-list .item:hover,
-.specifications-list .item:focus,
-.specifications-list .item:hover svg,
-.specifications-list .item:focus svg {
-  color: #000;
-  fill: #000;
-}
-
-.specifications-list .item-current:hover svg,
-.specifications-list .item-current:focus svg {
-  fill: #ee3b33;
-}
-
-.specifications-list .item:hover::after,
-.specifications-list .item:focus::after {
+.spec-item:hover::after,
+.spec-item:focus::after {
   background-color: #000;
 }
 
-.specifications-list .item-current:hover::after,
-.specifications-list .item-current:focus::after {
-  background-color: #ee3b33;
+.spec-item svg {
+  fill: #c8c8c8;
 }
 
-.specifications-list .item-current {
+.spec-item:hover svg,
+.spec-item:focus svg {
+  fill: #000;
+}
+
+.spec-item-current {
   color: #000;
 }
 
-.specifications-list .item-current svg {
+.spec-item-current::after {
+  background-color: #ee3b33;
+}
+
+.spec-item-current svg {
   fill: #ee3b33;
 }
 
-.specifications-list .item-current::after {
+.spec-item-current:hover svg,
+.spec-item-current:focus svg {
+  fill: #ee3b33;
+}
+
+.spec-item-current:hover::after,
+.spec-item-current:focus::after {
   background-color: #ee3b33;
 }
 
